@@ -1,0 +1,43 @@
+.nav{
+    width: 100%;
+    &__inner{
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        height: 65px;
+        
+    }
+    &__item{
+        height: 100%;
+        margin-right: 67px;
+        display: flex;
+        align-items: center;
+        .rem(20);
+        color: @nav;
+        font-weight: normal;
+
+        &:hover,&:focus,&:active{
+            font-weight: 600;
+            // font-family: @ffd;
+        }
+
+        &_active{
+            font-weight: 600;
+            // font-family: @ffd;
+            position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                top: -6px;
+                left: 0;
+                width: 100%;
+                display: block;
+                height: 10px;
+                border-radius: 5px;
+                background-color: @bg;
+            }
+        }   
+    }
+}
