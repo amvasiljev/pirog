@@ -1,5 +1,101 @@
-.header{
+.header {
     width: 100%;
+    border-bottom: 2px solid @line;
+
+    &__inner {
+        width: 100%;
+        max-width: 1180px;
+        height: 135px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+    }
+
+    &__box {
+        width: 40%;
+        
+        height: 100%;
+        padding: 30px 0;
+
+
+        &_geo {
+            background-repeat: no-repeat;
+            background-position: 0 30px;
+            background-size: 23px;
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            .rem(25);
+            color: @header;
+            font-weight: normal;
+        }
+
+        &_phone {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
     
+
+    &__logo {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        flex: 0 0 135px;
+        
+    }
+
+    &__call{
+        height: 74px;
+        border: 2px dashed @bg;
+        border-radius: 36px;
+        box-shadow: @box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 275px;
+        padding: 0 25px;
+        margin-left: -15px;
+    }
+    &__callback{
+        .rem(16);
+        color: @header;
+        font-weight: normal;
+        text-decoration: underline;
+
+        &:hover,&:focus,&:active{
+            color: @fu;
+        }
+    }
+    &__text{
+        color: @header;
+        .rem(30);
+        font-family: @fa;
+        position: relative;
+        width: 181px;
+        padding-right: 55px;
+
+        display: flex;
+        align-items: center;
+
+        background-repeat: no-repeat;
+        background-position: 100% center;
+        background-size: 55px;
+
+        span{
+            font-family: @fa;
+            position: absolute;
+            right: 55px;
+            bottom: -10px;
+
+        }
+    }
 
 }

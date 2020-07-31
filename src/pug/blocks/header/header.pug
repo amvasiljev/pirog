@@ -1,4 +1,11 @@
 mixin header()
 	header.header
 		.header__inner 
-			img(src="/assets/img/advantage_1.png")
+			.header__box.header__box_geo.lazy(data-src="/assets/img/geo.png") Доставим Вам торт по Москве и области без предоплаты!
+			.header__logo.lazy(data-src="/assets/img/logo.png")
+			.header__box.header__box_phone 
+				.header__text.lazy(data-src="/assets/img/callback.png") Связаться
+					span с нами
+				.header__call
+					+phone('phone_header')
+					a(href="#popup").header__callback Заказать обратный звонок 
