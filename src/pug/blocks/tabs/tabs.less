@@ -1,0 +1,32 @@
+.tabs{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    &__item{
+        width: 180px;
+        height: 40px;
+        color: @bk_2;
+        border: 3px dashed @bg;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .rem(16);
+        font-weight: 600;
+        margin-bottom: 20px;
+        &_hidden{
+            height: 0;
+            visibility: hidden;
+            margin-bottom: 0;
+        }
+        &_active{
+            background-color: @bg;
+
+        }
+        &:hover,&:focus,&:active{
+            background-color: @bg;
+            transition: all 0.3s;
+        }
+    }
+}
