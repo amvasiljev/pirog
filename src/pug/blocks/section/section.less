@@ -1,0 +1,46 @@
+.section{
+    width: 100%;
+    &_banner{
+        background-color: @fu_bg;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__inner{
+        width: 100%;
+        max-width: 1180px;
+        padding: 0;
+        margin: 0 auto;
+
+        &_banner{
+            height: 560px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+
+    &__box{
+
+        &_advantages{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            
+        }
+    }
+
+    &__first{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height:  560px;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 0;
+    }
+}

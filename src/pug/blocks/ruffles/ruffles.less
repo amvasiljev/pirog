@@ -1,0 +1,48 @@
+.ruffles {
+
+    &_down {
+        
+        &_rose {
+            height: 20px;
+            width: 100%;
+            background: -webkit-gradient(radial, 50% 0, 15, 50% 0, 20, from(@wt), color-stop(0.80, @wt), color-stop(0.51, @wt), to(@fu_bg));
+            background-size: 37px 100%;
+            background-position: center center;
+            margin-top: -10px;
+        }
+
+        &_grey{
+            height: 20px;
+            width: 100%;
+            background: -webkit-gradient(radial, 50% 0, 15, 50% 0, 20, from(@bg), color-stop(0.80, @bg), color-stop(0.51, @bg), to(@wt));
+            background-size: 37px 100%;
+            background-position: center center;
+            margin-top: -10px;
+        }
+    }
+
+    &_up {
+
+        &_rose {
+            height: 40px;
+            width: 100%;
+            background: -webkit-gradient(radial, 50% 100%, 15, 50% 100%, 20, from(#fff), color-stop(0.80, #fff), color-stop(0.51, #fff), to(rgba(255,255,255,0)));
+            background-position: center center;
+            background-size: 37px 100%;
+
+            position: absolute;
+            bottom: 0;
+            
+        }
+        &_grey{
+            height: 40px;
+            width: 100%;
+            background: -webkit-gradient(radial, 50% 100%, 15, 50% 100%, 20, from(@bg), color-stop(0.80, @bg), color-stop(0.51, @bg), to(@wt));
+            background-position: center center;
+            background-size: 37px 100%;
+        }
+    }
+}
+
+    
+   
