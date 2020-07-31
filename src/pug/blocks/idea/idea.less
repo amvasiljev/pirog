@@ -1,0 +1,91 @@
+.idea {
+
+    height: 890px;
+    position: relative;
+
+    &__marker {
+        height: 400px;
+        width: 400px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-11deg);
+        position: absolute;
+        left: 20%;
+
+
+    }
+
+    &__percent {
+
+        .rem(110);
+        color: @header;
+        font-family: @fa;
+        font-style: italic;
+        margin-bottom: -52px;
+        margin-top: -76px;
+    }
+
+    &__guarantee {
+        font-family: @ff;
+        .rem(30);
+        color: @black;
+        font-style: italic;
+        margin-top: -50px;
+
+    }
+
+    &__header {
+        height: 95px;
+    }
+
+
+    &__grey {
+        height: 150px;
+        background-color: @bg;
+        
+    }
+    &__text{
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
+        p{
+            width: 60%;
+            .rem(20);
+            color: @bk_2;
+            line-height: 26px;
+            padding-right: 150px;
+        }
+    }
+
+    &__rose {
+        background-color: @fu_bg;
+        height: 626px;
+        background-repeat: no-repeat;
+        background-position: 100% 10px;
+
+    }
+
+    &__content {}
+
+    &__title {}
+
+    &__subtitle {}
+
+    &__caption {}
+
+    &__callback {}
+
+    &__call {}
+
+    &__foto {}
+
+    &__offer {}
+}
