@@ -41,14 +41,28 @@ $('.tabs').on('click', 'a', function (e) {
 // end  tabs
 
 
-// inputs
-// $(document).on('focus', 'input[type="text"]', function () {
-//   $(this).addClass('input_focus');
-// })
-// $(document).on('blur', 'input[type="text"]', function () {
-//   $(this).removeClass('input_focus');
-// })
 
+
+$('.order__input').on('focus', function(){
+  $(this).addClass('order__input_active');
+})
+$('.order__input').on('blur', function(){
+  $(this).removeClass('order__input_active');
+})
+$('.order__textarea').on('focus', function(){
+  $(this).addClass('order__textarea_active');
+})
+$('.order__textarea').on('blur', function(){
+  $(this).removeClass('order__textarea_active');
+})
+
+
+$('.order__input_phone').mask('+7 (000) 000-00-00', {
+  placeholder: "+7 (___) ___-__-__"
+});
+// $('.feedback__input_phone').mask('+7 (000) 000-00-00', {
+//   placeholder: "+7 (___) ___-__-__"
+// });
 // inputs
 
 //mobile menu
@@ -165,3 +179,26 @@ $('.slider__box_3d').slick({
 
 
 // end slider
+
+
+$('#file').on('change', function() {
+  var arrayFiles = this.files, // массив с выбранными файлами
+      formItem = this.parentNode, // родительский элемент, для того чтобы вставить список с файлами
+      listFiles = document.createElement('ul'), // список с файлами
+      li = ''; // файлы
+  
+  // Если список с файлами уже вставлен в ДОМ, то удаляем его
+  if (formItem.querySelector('.order__list')) {
+    formItem.querySelector('.order__list').remove();
+  }
+  
+  listFiles.className = 'order__list'; // 
+  
+  for (var i = 0; i < arrayFiles.length; i++) {
+    li += '<li>' + arrayFiles[i].name + '</li>'; // <li>Имя файла</li>
+  }
+  
+  listFiles.innerHTML = li;
+  
+  formItem.appendChild(listFiles);  
+});

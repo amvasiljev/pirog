@@ -1,0 +1,27 @@
+mixin step()
+    .step__wrapper
+        .step
+            .step__image.lazy(data-src="/assets/img/step_1.png")
+            .step__content
+                .step__text 
+                    |Вы звоните по телефону 
+                    +phone('phone_step') 
+                    |<br>или присылаете нам фото понравившегося торта
+            .step__time Через 15 минут
+        .step
+            .step__image.lazy(data-src="/assets/img/step_2.png")
+            .step__content
+                .step__text  Мы перезваниваем вам и утверждаем дизайн, начинку, вес и цену торта
+            .step__time Через 12 часов
+        .step
+            .step__image.lazy(data-src="/assets/img/step_3.png")
+            .step__content
+                .step__text Наши профессиональные кондитеры выпекают и украшают ваш торт
+                    
+            .step__time Через 3 часа
+        .step
+            .step__image.lazy(data-src="/assets/img/step_4.png")
+            .step__content
+                .step__text Свежий вкусный торт на вашем праздничном столе! <span>Наслаждайтесь!</span>
+    .step__result.lazy(data-src="/assets/img/result.png")
+        .step__arrow.lazy(data-src="/assets/img/step_arrow.png")

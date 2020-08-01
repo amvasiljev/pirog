@@ -1,0 +1,28 @@
+mixin order()
+    .order
+        .order__title Хотите сделать заказ
+        .order__subtitle или просто рассчитать стоимость торта?
+        form(action="/").order__form
+            .order__step
+                .order__box
+                    .order__number.lazy(data-src="/assets/img/order_step.png") Шаг 1
+                    .order__text Приложите фото торта
+                input(type="file" multiple).order__file#file
+                label.order__label(for='file') Загрузить фото
+
+            .order__step
+                .order__box
+                    .order__number.lazy(data-src="/assets/img/order_step.png") Шаг 2
+                    .order__text По желанию напишите комментарий
+                textarea(name="", cols="30", rows="10" placeholder="Ваш комментарий (вес, цвет, цена)").order__textarea
+
+            .order__step
+                .order__box
+                    .order__number.lazy(data-src="/assets/img/order_step.png") Шаг 3
+                    .order__text Оставьте свои контакты, чтобы менеджер смог уточнить детали
+                .order__inputs
+                    input(type="text" name="name" placeholder="Ваше имя" autocomplete="off").order__input
+                    input(type="text" name="tel" autocomplete="off").order__input.order__input_phone
+            .order__step
+                +button('Узнать стоимость торта','button_order','submit')
+                .order__consent Нажимая на кнопку "Узнать стоимость торта", вы даёте своё согласие на обработку персональных данных.
