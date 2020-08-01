@@ -1,0 +1,11 @@
+mixin preview(img,group,slider)
+    if slider
+        .preview.preview_slide   
+            a(href= img data-fancybox= group).preview__link
+                img.preview__image.preview__image_slide.lazy(data-lazy= img)
+            +button('Хочу подобный','button_hidden','','/')
+    else
+        .preview  
+            a(href= img data-fancybox= group).preview__link
+                img.preview__image.lazy(data-src= img)
+            +button('Хочу подобный','button_hidden','','/')

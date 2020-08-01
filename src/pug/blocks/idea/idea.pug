@@ -1,22 +1,25 @@
 mixin idea()
-    .idea
+    .idea.lazy(data-src="/assets/img/bg_default.png")
         .idea__marker.lazy(data-src="/assets/img/percent.png") 
             .idea__percent 100%
             .idea__guarantee гарантия возврата
         .idea__header
+
         +ruffles('ruffles_up ruffles_up_grey')
         .idea__grey 
             .idea__text 
                 p Вы можете бесплатно отказаться от торта без объяснения причин. Мы не возьмём с вас денег и съедим торт сами!
         +ruffles('ruffles_down ruffles_down_grey')
+
         .idea__rose.lazy(data-src="/assets/img/form.png")
-            .idea__content
+        
+            .idea__content.lazy(data-src="/assets/img/cord_2.png")
                 .idea__title Есть своя идея 
                 .idea__subtitle праздничного торта?
                 .idea__caption С удовольствием воплотим её в жизнь!
                 .idea__callback
-                    .idea__call
+                    .idea__call Позвоните по номеру
                     +phone('phone_idea')
                 .idea__foto
-                    .idea__offer
-                    +button('Прислать фото')
+                    .idea__offer.lazy(data-src="/assets/img/callback_2.png") Или пришлите фото понравившегося торта
+                    +button('Прислать фото','','','','id')

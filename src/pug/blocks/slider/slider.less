@@ -1,0 +1,65 @@
+.slider {
+    position: relative;
+
+    &__title{
+        max-width: 380px;
+        width: 100%;
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @bk_2;
+        font-weight: normal;
+        .rem(25);
+        background-color: @bg;
+        border-radius: 25px;
+    }
+
+    &__box {
+
+       padding: 20px 0 40px;
+    }
+
+    &__arrows {
+
+        display: flex;
+        width: 160px;
+        position: absolute;
+        top: 82%;
+        justify-content: space-between;
+        height: 0;
+        left: 0;
+
+        
+
+
+    }
+
+    &__arrow {
+
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 10;
+        cursor: pointer;
+
+        &_next {
+            background-image: url(/assets/img/arrow_next.png);
+
+            &:hover {
+                background-image: url(/assets/img/arrow_next_active.png);
+            }
+        }
+
+        &_prev {
+            background-image: url(/assets/img/arrow_prev.png);
+
+            &:hover {
+                background-image: url(/assets/img/arrow_prev_active.png);
+            }
+        }
+    }
+}

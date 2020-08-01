@@ -1,0 +1,28 @@
+.taste{
+    width: calc(50% - 10px);
+    height: 270px;
+    border: 3px dashed @bg;
+    border-radius: 35px;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: @wt;
+
+    &__image{
+        width: 280px;
+        border-radius: 35px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 20px;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+    &__title{
+        .rem(25);
+        color: @bk;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+}

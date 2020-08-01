@@ -3,7 +3,10 @@ $(function () {
 });
 
 
-$('.tab__item').each(function(indx){
+
+
+
+$('.preview').each(function(indx){
   $(this).hover(
     function(){
      $(this).find('.button').addClass('button_visible')
@@ -15,15 +18,7 @@ $('.tab__item').each(function(indx){
 })
 
 
-
-
 // tabs
-
-// $('.section__tab').each(function () {
-//   if (($(this).hasClass('section__tab_active')) == false) {
-//     $(this).removeClass('section__tab_active')
-//   }
-// })
 
 
 
@@ -68,3 +63,105 @@ $('.tabs').on('click', 'a', function (e) {
 // }
 
 //products
+
+
+
+// sliders
+
+$('.slider__box_foto').slick({
+  lazyLoad: 'ondemand',
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  variableWidth: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next"></div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev"></div>',
+  appendArrows: $('.slider__arrows_foto'),
+  responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        // nextArrow: '<img class="slider__arrow slider__arrow_next" src="/assets/img/arrow_next_mobile.png" alt="">',
+        // prevArrow: '<img class="slider__arrow slider__arrow_prev" src="/assets/img/arrow_prev_mobile.png" alt="">',
+      }
+    }
+  ]
+});
+$('.slider__box_numbers').slick({
+  lazyLoad: 'ondemand',
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  variableWidth: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next"></div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev"></div>',
+  appendArrows: $('.slider__arrows_numbers'),
+  responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        // nextArrow: '<img class="slider__arrow slider__arrow_next" src="/assets/img/arrow_next_mobile.png" alt="">',
+        // prevArrow: '<img class="slider__arrow slider__arrow_prev" src="/assets/img/arrow_prev_mobile.png" alt="">',
+      }
+    }
+  ]
+});
+$('.slider__box_3d').slick({
+  lazyLoad: 'ondemand',
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  variableWidth: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next"></div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev"></div>',
+  appendArrows: $('.slider__arrows_3d'),
+  responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        // nextArrow: '<img class="slider__arrow slider__arrow_next" src="/assets/img/arrow_next_mobile.png" alt="">',
+        // prevArrow: '<img class="slider__arrow slider__arrow_prev" src="/assets/img/arrow_prev_mobile.png" alt="">',
+      }
+    }
+  ]
+});
+
+
+
+// end slider

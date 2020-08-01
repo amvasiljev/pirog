@@ -1,36 +1,13 @@
 mixin tab(cl,id,button)
     .tab(class= cl id= id)
-        .tab__item    
-            a(href="/assets/img/cake_1.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_1.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_2.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_2.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_3.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_3.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_4.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_4.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_1.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_1.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_2.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_2.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_3.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_3.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item    
-            a(href="/assets/img/cake_4.png" data-fancybox="tab_1").tab__link
-                img.tab__image.lazy(data-src="/assets/img/cake_4.png")
-            +button('Хочу подобный','button_hidden','','/')
-        .tab__item_all
+        +preview('/assets/img/cake_1.png','group_1')
+        +preview('/assets/img/cake_2.png','group_1')
+        +preview('/assets/img/cake_3.png','group_1')
+        +preview('/assets/img/cake_4.png','group_1')
+        +preview('/assets/img/cake_1.png','group_1')
+        +preview('/assets/img/cake_2.png','group_1')
+        +preview('/assets/img/cake_3.png','group_1')
+        +preview('/assets/img/cake_4.png','group_1')
+       
+        .tab__buttons
             a(href="/").tab__button= button

@@ -1,0 +1,23 @@
+mixin section_6()
+    section.section.section_taste#section_6.lazy(data-src="/assets/img/bg_2.jpg")
+        .section__inner
+            +title('21 начинка','с фантастическими вкусами')
+            .section__box.section__box_taste
+                +taste('/assets/img/cake_9.png','«Легкая классика»')
+                +taste('/assets/img/cake_10.png','«Нежный сливочный»')
+                +taste('/assets/img/cake_11.png','«Медовый»')
+                +taste('/assets/img/cake_12.png','«Йогуртовый»')
+                +taste('/assets/img/cake_13.png','«Сливочно-ореховый дакуаз»')
+                +taste('/assets/img/cake_14.png','«Панчо»')
+                +taste('/assets/img/cake_15.png','«Морковно-ореховый»')
+                +taste('/assets/img/cake_16.png','«Молочная девочка»')
+            .section__buttons
+                +button('Посмотреть все начинки')
+        .section__inner 
+            +title('Добавляйте в свой торт','Дополнительные ингредиенты!','title_left')
+            .section__box.section__box_components
+                +component('/assets/img/ingredient_1.png','Фрукты')
+                +component('/assets/img/ingredient_2.png','Ягоды')
+                +component('/assets/img/ingredient_3.png','Орехи')
+                +component('/assets/img/ingredient_4.png','Пропитка алкоголем')
+                +component('/assets/img/ingredient_5.png','Топпинг')

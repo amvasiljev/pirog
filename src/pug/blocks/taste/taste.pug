@@ -1,0 +1,6 @@
+mixin taste(img,title)
+    .taste
+        .taste__image.lazy(data-src= img)
+        .taste__content
+            .taste__title= title
+            +button('Описание','button_taste','','','id')

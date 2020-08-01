@@ -5,12 +5,24 @@
         font-family: @fm;
         text-transform: uppercase;
         text-align: center;
+
+        &_left{
+            text-align: left;
+        }
         &_rose{
             color: @fu;
             margin-bottom: 15px;
         }
         &_black{
             color: @bk;
+        }
+
+        &_small{
+            color: @bk;
+            .rem(35);
+            font-family: @ff;
+            font-weight: 600;
+            margin-bottom: 13px;
         }
     }
 }

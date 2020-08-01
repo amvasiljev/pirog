@@ -1,0 +1,33 @@
+.component{
+    width: calc(20% - 15px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+
+    &__ring{
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        border: 3px dashed @bg;
+        top: -10px;
+    }
+    &__image{
+        height: 170px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        flex: 0 0 170px;
+        z-index: 10;
+    }
+    &__title{
+        .rem(24);
+        color: @bk;
+        font-weight: normal;
+        margin-top: 10px;
+        max-width: 150px;
+        text-align: center;
+        align-self: center;
+    }
+}
