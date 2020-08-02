@@ -1,6 +1,6 @@
-mixin title(t1,t2,cl)
+mixin title(t1,t2,cl,cl1)
     if cl
-        .title
+        .title(class= cl1)
             .title__text.title__text_left.title__text_small= t1
             .title__text.title__text_left= t2
     else
