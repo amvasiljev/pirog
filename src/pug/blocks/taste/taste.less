@@ -7,6 +7,10 @@
     margin-bottom: 20px;
     background-color: @wt;
 
+    &_hidden{
+        display: none;
+    }
+
     &__image{
         width: 280px;
         border-radius: 35px;
@@ -25,4 +29,47 @@
         font-weight: normal;
         margin-bottom: 30px;
     }
+
+    &__description{
+        padding: 50px;
+        border-radius: 35px;
+        box-shadow: @box_button;
+        max-width: 580px;
+        width: 100%;
+        display: none;
+
+        .fancybox-button {
+            height: 40px;
+            width: 40px;
+            background-color: transparent;
+            right: 11px;
+            top: 11px;
+            background-image: url(/assets/img/close_black.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            opacity: 1;
+    
+            svg{
+                display: none;
+            }
+        }
+
+    }
+    &__heading{
+        .rem(45);
+        font-family: @fm;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+        color: @bk_2;
+    }
+    &__text{
+        line-height: 1.44;
+        .rem(18);
+        color: @bk_2;
+        font-weight: normal;
+    }
+
+    
 }

@@ -7,6 +7,12 @@
 
     &_fixed{
         border-bottom: 2px solid @line;
+        z-index: 200;
+        
+        .nav__inner{
+            justify-content: space-between;
+        width: 100%;
+        }
     }
 
     &__inner {
@@ -69,6 +75,9 @@
                 border-radius: 5px;
                 background-color: @bg;
             }
+        }
+        &_fixed{
+            margin-right: 0;
         }
     }
 }

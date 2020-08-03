@@ -22,7 +22,7 @@ mixin order()
                     .order__text Оставьте свои контакты, чтобы менеджер смог уточнить детали
                 .order__inputs
                     input(type="text" name="name" placeholder="Ваше имя" autocomplete="off").order__input
-                    input(type="text" name="tel" autocomplete="off").order__input.order__input_phone
+                    input(type="tel" name="tel" autocomplete="off").order__input.order__input_phone
             .order__step
                 +button('Узнать стоимость торта','button_order','submit')
                 .order__consent Нажимая на кнопку "Узнать стоимость торта", вы даёте своё согласие на обработку персональных данных.

@@ -1,0 +1,9 @@
+mixin popup_2()
+    .popup#popup_2
+        .popup__title Оставить отзыв
+        .popup__subtitle Будем рады подробному отзыву о нашей работе
+        form(action="/").popup__form
+            input(type="text" name="name" placeholder="Ваше имя" autocomplete="off").popup__input
+            input(type="tel" name="tel" autocomplete="off").popup__input.popup__input_phone
+            textarea(name="", cols="30", rows="10" placeholder="Ваш отзыв").popup__textarea
+            +button('Оставить заявку','button_popup','submit')

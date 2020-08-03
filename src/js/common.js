@@ -18,6 +18,10 @@ $('.preview').each(function (indx) {
 })
 
 
+
+
+
+
 // tabs
 
 
@@ -43,34 +47,47 @@ $('.tabs').on('click', 'a', function (e) {
 
 
 
-$('.order__input').on('focus', function () {
-  $(this).addClass('order__input_active');
+
+
+// inputs 
+
+$(document).on('focus', 'input[type="text"],input[type="tel"]', function () {
+  $(this).addClass('input_focus');
 })
-$('.order__input').on('blur', function () {
+$(document).on('blur', 'input[type="text"]', function () {
   if (!$(this).val()) {
-    $(this).removeClass('order__input_active');
+    $(this).removeClass('input_focus');
   }
+})
+
+$(document).on('focus', 'textarea', function () {
+  $(this).addClass('textarea_focus');
+})
 
 
-})
-$('.order__textarea').on('focus', function () {
-  $(this).addClass('order__textarea_active');
-})
-$('.order__textarea').on('blur', function () {
+$(document).on('blur', 'textarea', function () {
   if (!$(this).val()) {
-    $(this).removeClass('order__textarea_active');
+    $(this).removeClass('textarea_focus');
   }
-
 })
 
 
-$('.order__input_phone').mask('+7 (000) 000-00-00', {
+$('input[type="tel"]').mask('+7 (000) 000-00-00', {
   placeholder: "+7 (___) ___-__-__"
 });
-// $('.feedback__input_phone').mask('+7 (000) 000-00-00', {
-//   placeholder: "+7 (___) ___-__-__"
-// });
-// inputs
+
+
+// end inputs
+
+
+
+
+
+
+
+
+
+
 
 //mobile menu
 
@@ -239,7 +256,7 @@ $('.slider__box_reviews').slick({
 // end slider
 
 
-$('#file').on('change', function () {
+$('#file,#file_1').on('change', function () {
   var arrayFiles = this.files, // массив с выбранными файлами
     formItem = this.parentNode, // родительский элемент, для того чтобы вставить список с файлами
     listFiles = document.createElement('ul'), // список с файлами
@@ -307,13 +324,7 @@ function up() {
 
   var bodyScroll = $('body').scrollTop() + 300
 
-  if($('body').scrollTop() >= 300){
-    $('.nav').addClass('nav_fixed')
-    $('.nav__item').addClass('nav__item_fixed')
-  }else{
-    $('.nav').removeClass('nav_fixed')
-    $('.nav__item').removeClass('nav__item_fixed')
-  }
+  
 
   $('.section').each(function () {
     if ($(this).offset().top <= bodyScroll && $(this).offset().top != 0) {
@@ -337,3 +348,28 @@ function up() {
   })
 
 }
+
+ var pnoneFixed = $('.phone_header').clone().addClass('phone_fixed')
+
+$(document).on('scroll', function(){
+  if($('body').scrollTop() >= 300){
+   
+
+    $('.nav').addClass('nav_fixed')
+    $('.nav__item').addClass('nav__item_fixed')
+    pnoneFixed.appendTo('.nav_fixed .nav__inner')
+
+    
+  }else{
+    $('.nav').removeClass('nav_fixed')
+    $('.nav__item').removeClass('nav__item_fixed')
+    pnoneFixed.detach()
+  }
+})
+
+
+$('.button_open').on('click', function(){
+  $('.taste').removeClass('taste_hidden')
+  $(this).hide()
+})
+

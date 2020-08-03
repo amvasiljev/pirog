@@ -1,6 +1,9 @@
-mixin taste(img,title)
-    .taste
+mixin taste(img,title,cl)
+    .taste(class= cl)
         .taste__image.lazy(data-src= img)
         .taste__content
             .taste__title= title
-            +button('Описание','button_taste','','','id')
+            +button('Описание','button_taste','','','#description_0')
+        .taste__description#description_0
+            .taste__heading Lorem, ipsum.
+            .taste__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam nobis voluptatum earum assumenda. Aliquid placeat dolor quae dignissimos, fugiat maxime quam dolorem deleniti obcaecati quasi doloribus deserunt magni? Neque quisquam quibusdam fugiat, iusto suscipit recusandae perferendis quaerat, veniam earum commodi, magni natus? Nostrum, pariatur esse! Beatae dolorem sapiente enim autem officia? Expedita beatae nesciunt corporis asperiores deserunt veniam dolore mollitia inventore tempore vero ratione repellat iure exercitationem error ex quas, dolorum perspiciatis, nulla nihil voluptatem adipisci fugiat soluta cum quibusdam. Ipsam atque eos animi deserunt autem? Omnis beatae odit tempore sunt laudantium enim dolores praesentium atque voluptatum, minus, porro doloribus. 

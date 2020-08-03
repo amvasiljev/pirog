@@ -1,0 +1,10 @@
+mixin popup_1()
+    .popup#popup_1
+        .popup__title Прислать фото
+        .popup__subtitle Загрузите одно или несколько фото и наше менеджер свяжется с Вами
+        form(action="/").popup__form
+            input(type="file" multiple).popup__file#file_1
+            label.popup__label(for='file_1') Загрузить фото
+            input(type="text" name="name" placeholder="Ваше имя" autocomplete="off").popup__input
+            input(type="tel" name="tel" autocomplete="off").popup__input.popup__input_phone
+            +button('Оставить заявку','button_popup','submit')

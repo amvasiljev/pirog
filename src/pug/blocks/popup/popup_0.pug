@@ -1,0 +1,8 @@
+mixin popup_0()
+    .popup#popup_0
+        .popup__title Заказать звонок
+        .popup__subtitle Заполните необходимые поля и наш менеджер свяжется с вами через 15 минут
+        form(action="/").popup__form
+            input(type="text" name="name" placeholder="Ваше имя" autocomplete="off").popup__input
+            input(type="tel" name="tel" autocomplete="off").popup__input.popup__input_phone
+            +button('Оставить заявку','button_popup','submit')
