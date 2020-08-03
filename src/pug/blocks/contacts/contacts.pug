@@ -1,0 +1,20 @@
+mixin contacts()
+    .contacts
+        +title('','Контакты','left')
+        .contacts__inner
+            .contacts__item
+                .contacts__image.lazy(data-src="/assets/img/phone.png")
+                .contacts__content
+                    .contacts__title Телефон:
+                    +phone('phone_contacts')
+            .contacts__item
+                .contacts__image.lazy(data-src="/assets/img/email.png")
+                .contacts__content
+                    .contacts__title Email:
+                    a(href="mailto:zakaz@yatort.ru").contacts__caption zakaz@yatort.ru
+            .contacts__item
+                .contacts__image.lazy(data-src="/assets/img/address.png")
+                .contacts__content
+                    .contacts__title Адрес:
+                    .contacts__caption г.Москва, Ливецкая 4 д.3
+        +social()

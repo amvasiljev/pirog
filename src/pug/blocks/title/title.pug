@@ -1,9 +1,13 @@
 mixin title(t1,t2,cl,cl1)
     if cl
         .title(class= cl1)
-            .title__text.title__text_left.title__text_small= t1
-            .title__text.title__text_left= t2
+            if t1
+                .title__text.title__text_left.title__text_small= t1
+            if t2
+                .title__text.title__text_left= t2
     else
         .title
-            .title__text.title__text_rose= t1
-            .title__text.title__text_black= t2
+            if t1
+                .title__text.title__text_rose= t1
+            if t2
+                .title__text.title__text_black= t2

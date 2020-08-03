@@ -1,0 +1,9 @@
+mixin feedback()
+    .feedback
+        .feedback__title Остались вопросы
+        .feedback__subtitle Задайте их нашему менеджеру и получите ответ в течение 15 минут
+        .feedback__form
+            
+            textarea(name="", cols="30", rows="10" placeholder="Ваш комментарий (вес, цвет, цена)").feedback__textarea
+            input(type="text" name="tel" autocomplete="off").feedback__input.feedback__input_phone
+            +button('Отправить вопрос','button_feedback','submit')

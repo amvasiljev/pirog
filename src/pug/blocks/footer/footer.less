@@ -1,6 +1,29 @@
 .footer {
-  
-    p{
-        .rem(50);
+    width: 100%;
+    background-color: @bk;
+
+    &__inner {
+        width: 100%;
+        max-width: 1180px;
+        display: flex;
+        height: 75px;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto;
+
+    }
+
+    &__item {
+        .rem(16);
+        color: @wt;
+        font-weight: normal;
+        margin-right: 80px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @wt;
+
+        }
     }
 }

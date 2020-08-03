@@ -1,0 +1,129 @@
+.review {
+    padding: 50px 180px 0 100px;
+    background-color: transparent;
+    margin: 15px;
+    
+    &__inner {
+        display: flex;
+        padding: 30px 140px 30px 100px;
+        border-radius: 35px;
+        box-shadow: @box_button;
+        height: 380px;
+        position: relative;
+        background-color: @wt;
+
+    }
+
+    &__content {
+       width: 380px;
+    }
+
+    &__avatar {
+        position: absolute;
+        top: -44px;
+        left: -100px;
+        height: 180px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 3px dashed @bg;
+
+    }
+
+    &__foto {
+        height: 154px;
+        width: 154px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        .rem(25);
+        font-weight: normal;
+        color: @bk_2;
+        margin-bottom: 7px;
+
+    }
+
+    &__city {
+        .rem(18);
+        font-weight: normal;
+        color: @bk_2;
+
+    }
+
+    &__text {
+        padding: 20px 20px 20px 0;
+        .rem(16);
+        font-weight: normal;
+        color: @bk_2;
+        line-height: 20px;
+    }
+
+    &__link {
+        .rem(18);
+        color: @header;
+        font-weight: normal;
+        
+        position: relative;
+        &:before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: @header;
+            bottom: 1px;
+        }
+
+        &:hover,&:focus,&:active{
+            color: @fu;
+            &:before{
+                background-color: @fu;
+            }
+        }
+        
+    }
+
+    &__object {
+        width: 260px;
+        height: 325;
+        display: block;
+        flex: 0 0 260px;
+        position: relative;
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: @hover;
+            width: 100%;
+            height: 100%;
+            background-image: url(/assets/img/zoom.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 0;
+            border-radius: 35px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        &:hover {
+            position: relative;
+    
+            &:before {
+                opacity: 1;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__image {
+        border-radius: 35px;
+        box-shadow: @box_button;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}

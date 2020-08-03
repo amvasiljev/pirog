@@ -1,0 +1,38 @@
+.contacts{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 0 0 0;
+    padding: 40px 0;
+
+    &__item{
+        height: 55px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        &:first-child{
+            margin-top: 40px;
+        }
+    }
+    &__image{
+        height: 100%;
+        width: 55px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+    }
+    &__content{
+        padding: 0 0 0 30px;
+    }
+    &__title{
+        .rem(16);
+        font-weight: normal;
+        color: @bk_2;
+        margin-bottom: 7px;
+    }
+    &__caption{
+        .rem(20);
+        color: @bk_2;
+        font-weight: normal;
+    }
+}

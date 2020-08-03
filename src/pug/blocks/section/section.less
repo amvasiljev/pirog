@@ -1,94 +1,178 @@
-.section{
+.section {
     width: 100%;
-    &_banner{
+
+    &_banner {
         background-color: @fu_bg;
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
     }
-    &_taste{
-        
-        
+
+    &_taste {
+
+
         background-repeat: no-repeat;
         background-position: center center;
 
     }
 
-    &_order{
+    &_order {
         background-color: @fu_bg;
         background-position: 100% 100%;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
-    &__inner{
+    &_contacts {
+        height: 480px;
+        // background-repeat: no-repeat;
+        // background-position: 100% 100%;
+        // background-image:url('/assets/img/final.png'),@bg_c;
+        // background-size: contain;
+        display: flex;
+    }
+
+    &__inner {
         width: 100%;
         max-width: 1180px;
         padding: 0;
         margin: 0 auto;
-        
+
         padding: 60px 0;
 
-        &_banner{
+        &_advantages{
+            padding: 100px 0 40px;
+        }
+
+        &_banner {
             height: 560px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
         }
+        &_decoration{
+            padding: 100px 0 60px;
+        }
+
+        &_taste{
+            padding: 60px 0 15px;
+        }
+        &_contacts {
+            display: flex;
+            height: 100%;
+            padding: 0;
+        }
     }
 
 
-    &__box{
+    &__box {
 
-        &_advantages{
+        &_advantages {
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
 
         }
-        &_taste{
+
+        &_taste {
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
             padding: 35px 0 0 0;
 
         }
-        &_components{
+
+        &_components {
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
             padding: 50px 0 0 0;
         }
-        &_steps{
+
+        &_steps {
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
-            
+
+        }
+
+        &_reviews {
+            display: flex;
+            align-items: center;
         }
 
     }
 
-    &__first{
+    &__first {
         position: absolute;
         top: 0;
         left: 50%;
-        height:  560px;
+        height: 560px;
         width: 50%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100% 0;
     }
-    
-    &__tabs{
+
+    &__tabs {
         position: relative;
         height: 640px;
     }
 
-    &__buttons{
+    &__buttons {
         width: 100%;
         display: flex;
         justify-content: center;
         padding: 15px 0 0 0;
+    }
+
+    &__reviews {
+        .rem(25);
+        color: @bk;
+        font-weight: normal;
+        margin-right: 20px;
+
+        a {
+            color: @fu;
+            font-weight: 600;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: @fu;
+                bottom: 0;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: @header;
+
+                &:before {
+                    background-color: @header;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        background: @contacts;
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__form {
+        width: 55%;
+        height: 100%;
+        background-color: @fu_bg;
+         background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: contain;
     }
 }

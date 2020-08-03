@@ -204,6 +204,36 @@ $('.slider__box_gallery').slick({
   ]
 });
 
+$('.slider__box_reviews').slick({
+  lazyLoad: 'ondemand',
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next"></div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev"></div>',
+  appendArrows: $('.slider__arrows_reviews'),
+  responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+});
+
 
 
 // end slider
@@ -230,3 +260,80 @@ $('#file').on('change', function () {
 
   formItem.appendChild(listFiles);
 });
+
+
+$('.nav__item').on('click', function (e) {
+  e.preventDefault();
+
+
+  var id = $(this).attr('href');
+  var marker = $(id);
+
+
+  $('html, body').animate({
+    scrollTop: marker.offset().top - 80,
+    easing: 'linear'
+  }, 1000);
+
+  $(this).addClass('nav__item_active')
+  $('.nav__item').not($(this)).removeClass('nav__item_active')
+
+  $('.nav__item').each(function () {
+    if ($(this).attr('href') == id) {
+      $(this).addClass('nav__item_active')
+    }
+  })
+
+})
+
+
+$(window).bind('mousewheel DOMMouseScroll', function (event) {
+  if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+
+    if ($(document).scrollTop() <= 0) return;
+    up();
+
+  } else {
+
+
+    if ($(document).scrollTop() >= document.outerHeight) return;
+
+    up()
+  }
+});
+
+
+function up() {
+
+  var bodyScroll = $('body').scrollTop() + 300
+
+  if($('body').scrollTop() >= 300){
+    $('.nav').addClass('nav_fixed')
+    $('.nav__item').addClass('nav__item_fixed')
+  }else{
+    $('.nav').removeClass('nav_fixed')
+    $('.nav__item').removeClass('nav__item_fixed')
+  }
+
+  $('.section').each(function () {
+    if ($(this).offset().top <= bodyScroll && $(this).offset().top != 0) {
+      $('.section').removeClass('up')
+      $(this).addClass('up')
+
+    } else {
+      $(this).removeClass('up')
+    }
+  })
+
+
+  var attr = '#' + $('.up').attr('id')
+
+  $('.nav__item').each(function () {
+    if ($(this).attr('href') == attr) {
+      $(this).addClass('nav__item_active')
+    } else {
+      $(this).removeClass('nav__item_active')
+    }
+  })
+
+}
