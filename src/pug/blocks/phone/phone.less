@@ -2,9 +2,19 @@
 
     .rem(20);
     color: @bk_2;
+
+    @media @320{
+        .rem(18);
+    }
     &_header{
         .rem(22);
         color: @bk_1;
+        @media @1024{
+            .rem(18);
+        }
+        @media @320{
+            .rem(14);
+        }
     }
     &_idea{
         color: @wt;

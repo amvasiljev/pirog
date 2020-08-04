@@ -93,9 +93,41 @@ $('input[type="tel"]').mask('+7 (000) 000-00-00', {
 
 
 
-// if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-//  
-// }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+
+  var mobileNav = $('<div>').addClass('nav_mobile'),
+  mobileItems = $('.nav__inner').html(),
+  mobileWrapper = $('<div>').addClass('nav_outer').prependTo('body'),
+  burger = $('.burger'),
+  closeButton = $('<div>').addClass('nav_close');
+  
+  
+  mobileWrapper.append(mobileNav);
+  mobileNav.append(closeButton);
+  mobileNav.append(mobileItems);
+  mobileNav.find('.nav__item').addClass('nav__item_mobile');
+  
+  
+  // var headerCallback = $('.header__callback').clone().appendTo(mobileWrapper).addClass('header__callback_mobile');
+  
+  
+  burger.on('click', function () {
+    mobileWrapper.fadeIn()
+    console.log('bur');
+    $('body').addClass('stop_scrolling');
+  })
+  
+  closeButton.on('click', function () {
+   mobileWrapper.fadeOut()
+   $('body').removeClass('stop_scrolling');
+  })
+  
+  $('.nav__item_mobile').on('click',function(){
+    mobileWrapper.fadeOut()
+    $('body').removeClass('stop_scrolling');
+  })
+
+}
 
 
 
@@ -352,9 +384,8 @@ function up() {
  var pnoneFixed = $('.phone_header').clone().addClass('phone_fixed')
 
 $(document).on('scroll', function(){
-  if($('body').scrollTop() >= 300){
-   
-
+  if($(this).scrollTop() >= 300){
+ 
     $('.nav').addClass('nav_fixed')
     $('.nav__item').addClass('nav__item_fixed')
     pnoneFixed.appendTo('.nav_fixed .nav__inner')

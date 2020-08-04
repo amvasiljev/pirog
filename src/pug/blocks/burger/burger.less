@@ -1,0 +1,43 @@
+.burger {
+    background-image: url(/assets/img/menu.svg);
+    background-position: center center;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    flex: 0 0 50px;
+    cursor: pointer;
+    display: none;
+
+    @media 
+    @768,
+    @320 {
+        display: block;
+        order: 1;
+        // height: 45px;
+        // width: 45px;
+    }
+
+    @media @320 {
+        // position: absolute;
+        // top: 17px;
+        // right: 17px;
+    }
+
+    &_fixed {
+        display: block;
+
+        @media @320 {
+            top: 13px;
+        }
+    }
+
+    &_close {
+        background-image: url(/assets/img/close.svg);
+    }
+
+
+
+
+}

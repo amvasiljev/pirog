@@ -4,7 +4,40 @@
     top: 0;
     z-index: 100;
     background-color: @wt;
+   
+    @media @768,@320{
+        display: none;
+    }
 
+    &_outer{
+        display: none;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background-color: @fu_bg;
+        z-index: 300;
+        padding: 30px 0;
+       
+    }
+    &_mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &_close{
+        height: 50px;
+        width: 50px;
+        background-image: url(/assets/img/close.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        @media @320{
+            height: 40px;
+            width: 40px;
+        }
+    }
     &_fixed{
         border-bottom: 2px solid @line;
         z-index: 200;
@@ -22,7 +55,9 @@
         padding: 0;
         display: flex;
         height: 65px;
-
+        @media @1024{
+            padding: 0 20px;
+        }
     }
 
     &__item {
@@ -33,6 +68,10 @@
         .rem(20);
         color: @nav;
         font-weight: normal;
+
+        @media @1024{
+            .rem(18);
+        }
 
         &:hover,
         &:focus,
@@ -78,6 +117,20 @@
         }
         &_fixed{
             margin-right: 0;
+        }
+        &_mobile{
+            margin: 0;
+            .rem(25);
+            color: @wt;
+            font-weight: normal;
+            height: 70px;
+
+            @media @320{
+                height: 50px;
+            }
+            &:before{
+                display: none;
+            }
         }
     }
 }

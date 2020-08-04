@@ -10,7 +10,20 @@
         align-items: center;
         justify-content: flex-start;
         margin: 0 auto;
-
+        @media @1024{
+            padding: 0 20px;
+        }
+        @media @768{
+            padding: 0 20px;
+            flex-flow: wrap;
+            height: unset;
+        }
+        @media @320{
+            padding: 0 10px;
+            height: 70px;
+            flex-flow: wrap;
+            height: unset;
+        }
     }
 
     &__item {
@@ -19,6 +32,10 @@
         font-weight: normal;
         margin-right: 80px;
 
+        @media @768,@320{
+            width: 100%;
+            margin: 10px 0;
+        }
         &:hover,
         &:focus,
         &:active {
