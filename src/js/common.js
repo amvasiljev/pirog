@@ -2,8 +2,17 @@ $(function () {
   $('.lazy').Lazy();
 });
 
+window.addEventListener("orientationchange", function() {
+  location.reload()
+ 
+}, false);
 
+var windowWidth = window.innerWidth
 
+if(windowWidth < 550){
+  $('.section__first').removeClass('lazy')
+  $('.step__result').removeClass('lazy')
+}
 
 
 $('.preview').each(function (indx) {
