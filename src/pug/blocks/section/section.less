@@ -35,6 +35,12 @@
     &_contacts {
         height: 480px;
         display: flex;
+        @media @768,@320{
+            height: unset;
+        }
+        @media @320{
+            flex-direction: column-reverse;
+        }
     }
 
     &__inner {
@@ -205,6 +211,19 @@
         height: 100%;
         display: flex;
         justify-content: flex-end;
+        @media @1024{
+            padding: 0 0 0 20px;
+        }
+        @media @768{
+            height: unset;
+            padding: 0 0 0 20px;
+            
+        }
+        @media @320{
+            height: unset;
+            padding: 0 0 0 10px;
+            width: 100%;
+        }
     }
 
     &__form {
@@ -214,5 +233,20 @@
          background-repeat: no-repeat;
         background-position: 100% 100%;
         background-size: contain;
+        @media @1024{
+            background-position: 250px 100%;
+        }
+        @media @768,@320{
+            background-image: none !important;
+        }
+        @media @768{
+            height: unset;
+           padding: 20px 20px 20px 0;
+        }
+        @media @320{
+            width: 100%;
+            margin: 0;
+            padding: 30px 10px 20px
+        }
     }
 }

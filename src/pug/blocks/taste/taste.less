@@ -62,6 +62,10 @@
         width: 100%;
         display: none;
 
+        @media @320{
+            padding: 60px 20px 50px;
+        }
+
         .fancybox-button {
             height: 40px;
             width: 40px;
@@ -87,6 +91,14 @@
         text-align: center;
         margin-bottom: 30px;
         color: @bk_2;
+        @media @320{
+            .rem(32);
+            margin-bottom: 20px;
+        }
+        @media @300{
+            .rem(25);
+            margin-bottom: 20px;
+        }
     }
     &__text{
         line-height: 1.44;

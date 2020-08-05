@@ -1,11 +1,18 @@
 .feedback{
     padding: 40px 0 0 30px;
+    @media @320{
+        padding: 0;
+    }
     &__title {
         .rem(45);
         color: @wt;
         font-family: @fm;
         text-transform: uppercase;
         margin-bottom: 10px;
+        @media @320 {
+            .rem(32);
+            text-align: center;
+        }
     }
 
     &__subtitle{
@@ -15,6 +22,10 @@
         max-width: 370px;
         line-height: 26px;
         margin-bottom: 20px;
+        @media @320 {
+            .rem(18);
+            text-align: center;
+        }
     }
 
     &__form{
