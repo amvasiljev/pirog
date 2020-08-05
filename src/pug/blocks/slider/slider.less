@@ -1,7 +1,7 @@
 .slider {
     position: relative;
 
-    &__title{
+    &__title {
         max-width: 380px;
         width: 100%;
         margin: 0 auto;
@@ -14,26 +14,36 @@
         .rem(25);
         background-color: @bg;
         border-radius: 25px;
+
+        @media @320 {
+            .rem(18);
+            height: 40px;
+
+        }
     }
 
     &__box {
 
-       padding: 20px 0 40px;
+        padding: 20px 0 40px;
 
-       &_gallery{
-        
-        .slick-track{
-            display: flex;
-            align-items: center;
+        &_gallery {
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
         }
-       }
-       &_reviews{
-      
-        .slick-track{
-            display: flex;
-            align-items: center;
+
+        &_reviews {
+
+            @media @320{
+                padding: 20px 0;
+            }
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
         }
-       }
     }
 
     &__arrows {
@@ -46,14 +56,29 @@
         height: 0;
         left: 0;
 
-        &_gallery{
+        @media @320 {
+            width: 120px;
+        }
+
+        &_gallery {
             top: 62%;
             left: 220px;
+
+            @media @320 {
+                top: 83%;
+                left: 187px;
+            }
         }
-        &_reviews{
+
+        &_reviews {
             top: 69%;
             left: unset;
             right: 10%;
+            @media @320{
+                top: 49%;
+                left: unset;
+                right: -2%;
+            }
         }
 
     }
@@ -67,6 +92,12 @@
         background-position: center center;
         z-index: 10;
         cursor: pointer;
+
+        @media @320 {
+            width: 50px;
+            height: 50px;
+            background-size: 40px;
+        }
 
         &_next {
             background-image: url(/assets/img/arrow_next.png);

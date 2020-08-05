@@ -3,6 +3,15 @@
     height: 180px;
     display: flex;
     margin-bottom: 20px;
+    @media @1024{
+        width: calc(50% - 10px);
+    }
+    @media @768{
+        width: calc(50% - 10px);
+    }
+    @media @320{
+        width: 100%;
+    }
     &__image{
         height: 180px;
         width: 180px;
@@ -22,6 +31,9 @@
         background-color: @bg;
         border-radius: 35px;
         padding: 0 30px 0 50px;
+        @media @320{
+            padding: 0 6px 0 57px;
+        }
     }
     &__title{
         .rem(20);

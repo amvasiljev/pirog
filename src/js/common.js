@@ -25,7 +25,7 @@ $('.preview').each(function (indx) {
 // tabs
 
 
-
+$('.tab').not($('.tab_active')).fadeOut(4)
 
 $('.tabs').on('click', 'a', function (e) {
   e.preventDefault()
@@ -36,8 +36,8 @@ $('.tabs').on('click', 'a', function (e) {
   var id = $(this).attr('href')
 
   var tabActive = $(id)
-  $('.tab').not(tabActive).removeClass('tab_active')
-  tabActive.addClass('tab_active')
+  $('.tab').not(tabActive).removeClass('tab_active').hide()
+  tabActive.addClass('tab_active').fadeIn()
 
 
 })
@@ -159,7 +159,7 @@ $('.slider__box_foto').slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       }
     }
   ]
@@ -188,7 +188,7 @@ $('.slider__box_numbers').slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       }
     }
   ]
@@ -217,7 +217,7 @@ $('.slider__box_3d').slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       }
     }
   ]
@@ -235,19 +235,20 @@ $('.slider__box_gallery').slick({
   responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       }
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
+        variableWidth: false,
       }
     }
   ]
@@ -258,26 +259,27 @@ $('.slider__box_reviews').slick({
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
-  variableWidth: true,
+  variableWidth: false,
   nextArrow: '<div class="slider__arrow slider__arrow_next"></div>',
   prevArrow: '<div class="slider__arrow slider__arrow_prev"></div>',
   appendArrows: $('.slider__arrows_reviews'),
   responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       }
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
+        
       }
     }
   ]
@@ -354,7 +356,7 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
 
 function up() {
 
-  var bodyScroll = $('body').scrollTop() + 300
+  var bodyScroll = $(document).scrollTop() + 300
 
   
 
@@ -362,7 +364,7 @@ function up() {
     if ($(this).offset().top <= bodyScroll && $(this).offset().top != 0) {
       $('.section').removeClass('up')
       $(this).addClass('up')
-
+    
     } else {
       $(this).removeClass('up')
     }

@@ -4,12 +4,19 @@
     background-position: 99% 83%;
     background-size: 273px;
     width: 582px;
+    @media @320{
+        width: 100%;
+        background-image: none !important;
+    }
     &__title{
         font-family: @fm;
         .rem(60);
         color: @wt;
         text-transform: uppercase;
         margin-bottom: 15px;
+        @media @320{
+            .rem(40);
+        }
     }
     &__subtitle{
         .rem(30);
@@ -17,6 +24,9 @@
         font-weight: 600;
         margin-bottom: 30px;
         text-transform: uppercase;
+        @media @320{
+            .rem(24);
+        }
     }
     &__text{
         .rem(24);

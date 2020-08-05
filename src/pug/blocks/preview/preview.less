@@ -4,9 +4,24 @@
     margin-bottom: 20px;
     position: relative;
 
+    @media @1024,@768{
+        width: calc(33% - 15px);
+    }
+    @media @320{
+        
+        
+    }
+
     &_slide{
         margin: 15px 10px;
-        
+        @media @1024,@768{
+            width: 280px;
+        }
+    }
+    &_hidden{
+        visibility: hidden;
+        height: 0;
+        margin: 0;
     }
 
     &__link {
@@ -46,6 +61,11 @@
     &__image {
         border-radius: 35px;
         box-shadow: @box;
+        @media @1024,@768{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         &_slide{
             box-shadow: unset;
         }

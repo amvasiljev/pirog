@@ -2,12 +2,26 @@
     width: 60%;
     position: relative;
 
+
+    @media @1024{
+        width: 78%;
+    }
+    @media @768{
+        width: 100%;
+    }
+    @media @320{
+        width: 100%;
+    }
     &__title {
         .rem(45);
         color: @wt;
         font-family: @fm;
         text-transform: uppercase;
         margin-bottom: 10px;
+        @media @320 {
+            .rem(32);
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -17,11 +31,17 @@
         max-width: 450;
         text-transform: uppercase;
         line-height: 50px;
-
+        @media @320 {
+            .rem(24);
+            text-align: center;
+        }
     }
 
     &__form {
         padding: 40px 0 0 0;
+        @media @320{
+            width: 100%;
+        }
     }
 
     &__label {
@@ -40,7 +60,9 @@
         background-color: @button;
         cursor: pointer;
         box-shadow: @box_button;
-
+        @media @320{
+            margin: 0 auto;
+        }
         &:hover,
         &:focus {
             background: @fu;
@@ -62,6 +84,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media @320{
+            .rem(16);
+        }
     }
 
     &__text {
@@ -69,6 +94,9 @@
         font-weight: 600;
         color: @wt;
         line-height: 26px;
+        @media @320{
+            .rem(16);
+        }
     }
 
     &__consent {
@@ -76,11 +104,20 @@
         color: @wt;
         line-height: 22px;
         padding: 0 0 0 25px;
+        @media @320{
+            .rem(14);
+            padding: 15px 0 0 0;
+
+        }
     }
 
     &__step {
         display: flex;
         align-items: flex-start;
+        @media @320{
+            flex-flow: wrap;
+            padding: 0 0 10px 0;
+        }
     }
 
     &__box {
@@ -89,6 +126,11 @@
         align-items: center;
         margin-top: -10px;
         margin-right: 50px;
+        @media @320{
+            width: 100%;
+            max-width: 414px;
+            margin: 0;
+        }
         &:first-child{
             margin-bottom: 10px;
         }
@@ -100,6 +142,9 @@
         align-items: flex-start;
         margin-top: 0;
         width: auto;
+        @media @320{
+            width: 100%;
+        }
     }
 
     &__file {
@@ -137,11 +182,16 @@
         box-shadow: @box_button;
         .rem(18);
         color: @bk;
+
+        @media @320{
+            width: 100%;
+        }
         &::placeholder{
             .rem(18);
             font-weight: normal;
             color: @pls;
         }
+        
         &_active{
             border: 1px solid @header;
         }
@@ -156,6 +206,9 @@
         padding: 20px;
         .rem(18);
         color: @bk;
+        @media @320{
+            width: 100%;
+        }
         &::placeholder{
             .rem(18);
             font-weight: normal;

@@ -4,6 +4,15 @@
     display: flex;
     flex-direction: column;
     
+    @media @1024,@768{
+        width: calc(30% - 15px);
+        margin-bottom: 20px;
+
+    }
+    @media @320{
+        width: calc(50% - 10px);
+        margin-bottom: 15px;
+    }
 
     &__ring{
         position: absolute;
@@ -12,6 +21,11 @@
         border-radius: 50%;
         border: 3px dashed @bg;
         top: -10px;
+        @media @320{
+            height: 130px;
+            width: 130px;
+
+        }
     }
     &__image{
         height: 170px;
@@ -20,6 +34,11 @@
         background-position: 0 100%;
         flex: 0 0 170px;
         z-index: 10;
+        @media @320{
+            height: 130px;
+            flex: 0 0 130px;
+            background-size: 90%;
+        }
     }
     &__title{
         .rem(24);

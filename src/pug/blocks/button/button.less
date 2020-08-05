@@ -1,4 +1,4 @@
-.button{
+.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -15,14 +15,15 @@
     cursor: pointer;
     box-shadow: @box_button;
 
-    &:hover,&:focus{
-                background: @fu;
-                box-shadow: @box;
-                transition: all 0.3s;
-            }
-    
+    &:hover,
+    &:focus {
+        background: @fu;
+        box-shadow: @box;
+        transition: all 0.3s;
+    }
 
-    &_hidden{
+
+    &_hidden {
         display: none;
         margin: 0 auto;
         position: absolute;
@@ -31,20 +32,40 @@
         height: 50px;
         left: 43px;
         z-index: 100;
+
+        @media @1024,
+        @768,
+        @320 {
+            width: 70%;
+            margin: 0px -50% 0 15%;
+            left: unset;
+            white-space: nowrap;
+        }
     }
-    &_visible{
+
+    &_visible {
         display: flex;
     }
 
 
-    &_taste{
+    &_taste {
         width: 206px;
+        @media @1024,@768,@320{
+            width: unset;
+        }
     }
-    &_order{
+
+    &_order {
         width: 280px;
         flex: 0 0 280px;
+        @media @320{
+            width: 100%;
+            max-width: 414px;
+            flex: unset;
+        }
     }
-    &_popup{
+
+    &_popup {
         width: 100%;
         max-width: 380px;
     }

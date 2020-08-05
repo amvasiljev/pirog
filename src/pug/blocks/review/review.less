@@ -2,20 +2,44 @@
     padding: 50px 180px 0 100px;
     background-color: transparent;
     margin: 15px;
+
+    @media @1024{
+        padding: 50px 30px 0 100px;
+    }
+    @media @768{
+        padding: 50px 30px 0 34px;
+    }
+    @media @320{
+        padding: 0;
+    }
     
     &__inner {
         display: flex;
         padding: 30px 140px 30px 100px;
         border-radius: 35px;
         box-shadow: @box_button;
-        height: 380px;
+        height: unset;
         position: relative;
         background-color: @wt;
 
+        @media @768{
+            flex-direction: column;
+            padding: 30px 84px 30px 73px;
+        }
+        @media @320{
+            flex-direction: column;
+            padding: 10px;
+        }
     }
 
     &__content {
        width: 380px;
+       @media @768{
+           width: unset;
+       }
+       @media @320{
+           width: unset;
+       }
     }
 
     &__avatar {
@@ -30,12 +54,27 @@
         border-radius: 50%;
         border: 3px dashed @bg;
 
+        @media @768{
+            position: unset;
+        }
+        @media @320{
+            position: absolute;
+            left: unset;
+            right: 10px;
+            top: 10px;
+            height: 100px;
+            width: 100px;
+        }
     }
 
     &__foto {
         height: 154px;
         width: 154px;
         border-radius: 50%;
+        @media @320{
+            height: 80px;
+            width: 80px;
+        }
     }
 
     &__name {
@@ -59,6 +98,9 @@
         font-weight: normal;
         color: @bk_2;
         line-height: 20px;
+        @media @320{
+            padding: 50px 0 20px;
+        }
     }
 
     &__link {
@@ -67,6 +109,7 @@
         font-weight: normal;
         
         position: relative;
+      
         &:before{
             content:'';
             position: absolute;
@@ -92,7 +135,12 @@
         flex: 0 0 260px;
         position: relative;
 
-
+        @media @768{
+            margin-top: 20px;
+        }
+        @media @320{
+            margin-top: 20px;
+        }
         &:before {
             content: '';
             position: absolute;

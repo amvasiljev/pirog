@@ -21,14 +21,19 @@
         background-position: 100% 100%;
         background-repeat: no-repeat;
         background-size: contain;
+        @media @1024{
+            background-position: 415px 100%;
+        }
+        @media @768{
+            background-position: 415px 100%;
+        }
+        @media @320{
+            background-image: none !important;
+        }
     }
 
     &_contacts {
         height: 480px;
-        // background-repeat: no-repeat;
-        // background-position: 100% 100%;
-        // background-image:url('/assets/img/final.png'),@bg_c;
-        // background-size: contain;
         display: flex;
     }
 
@@ -40,6 +45,17 @@
 
         padding: 60px 0;
 
+        @media @1024{
+            padding: 40px 20px;
+        }
+        @media @768{
+            padding: 40px 20px;
+        }
+        @media @320{
+            padding: 30px 10px;
+           
+        }
+
         &_advantages{
             padding: 100px 0 40px;
         }
@@ -50,6 +66,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            @media @320{
+                height: unset;
+                padding: 40px 10px;
+            }
+            
         }
         &_decoration{
             padding: 100px 0 60px;
@@ -88,6 +109,9 @@
             flex-flow: wrap;
             justify-content: space-between;
             padding: 50px 0 0 0;
+            @media @1024,@768{
+                justify-content: flex-start;
+            }
         }
 
         &_steps {
@@ -100,6 +124,11 @@
         &_reviews {
             display: flex;
             align-items: center;
+            @media @320{
+                flex-flow: wrap;
+                justify-content: center;
+
+            }
         }
 
     }
@@ -113,11 +142,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100% 0;
+
+        @media @1024{
+            background-position: 28% 0;
+        }
+        @media @768,@320{
+            display: none !important
+        }
     }
 
     &__tabs {
         position: relative;
-        height: 640px;
+        // height: 640px;
     }
 
     &__buttons {
@@ -132,6 +168,10 @@
         color: @bk;
         font-weight: normal;
         margin-right: 20px;
+        @media @320{
+            .rem(18);
+            margin-bottom: 20px;
+        }
 
         a {
             color: @fu;

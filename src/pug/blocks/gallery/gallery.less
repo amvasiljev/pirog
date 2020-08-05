@@ -3,11 +3,23 @@
     margin: 20px 0;
     align-items: center;
     // justify-content: space-between;
+    @media @320{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px;
+    }
     &__image{
         border-radius: 35px;
         box-shadow: @box_button;
         width: 780px;
         height: 320px;
+        @media @768{
+            width: unset;
+        }
+        @media @320{
+            width: unset;
+           height: unset;
+        }
     }
     &__text{
         flex: 0 0 380px;
@@ -16,5 +28,13 @@
         color: @bk_2;
         font-weight: normal;
         line-height: 26px;
+        @media @768{
+            flex: 0 0 240px;
+        }
+        @media @320{
+            // max-width: 280px;
+            flex: unset;
+            padding: 0 0 20px 0;
+        }
     }
 }
