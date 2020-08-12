@@ -23,6 +23,7 @@
     }
     &__text{
         flex: 0 0 380px;
+        width: 400px;
         padding: 0 20px 0 0;
         .rem(20);
         color: @bk_2;
@@ -30,11 +31,13 @@
         line-height: 26px;
         @media @768{
             flex: 0 0 240px;
+            width: 260px;
         }
         @media @320{
             // max-width: 280px;
             flex: unset;
             padding: 0 0 20px 0;
+            width: unset;
         }
     }
 }
